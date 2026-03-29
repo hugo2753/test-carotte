@@ -1,171 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>test Project CARotte</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARotte - Coopérative Intégrale</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-logo">Project<span>.</span>CARotte test </div>
-    <ul>
-      <li><a href="#themes">Le projet</a></li>
-      <li><a href="#cooperative">Coopérative</a></li>
-      <li><a href="#ressources">Ressources</a></li>
-      <li><a href="#apropos">À propos</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-left">
-      <span class="hero-tag">Agriculture · ESS · Collectif</span>
-      <h1 class="hero-title">Coopérative<br><em>Agricole</em><br>Révolutionnaire</h1>
-      <p class="hero-subtitle">Une organisation économique anti-capitaliste locale pour en aider à en sortir globalement.</p>
-      <div class="hero-cta">
-        <a href="#themes" class="btn btn-primary">Découvrir le projet</a>
-        <a href="#contact" class="btn btn-outline">Nous rejoindre</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-blob"></div>
-      <div class="hero-illustration">🥕</div>
-      <div class="hero-dots">
-        <span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- THEMES / PILIERS -->
-  <section id="themes">
-    <p class="section-label">Ce qu'on construit</p>
-    <h2 class="section-title">Trois piliers au cœur du projet CARotte</h2>
-    <div class="themes-grid">
-      <div class="theme-card">
-        <span class="card-icon">🥕</span>
-        <h3 class="card-title">Agriculture paysanne</h3>
-        <p class="card-text">Produire localement, en agroécologie, en circuit court. La CARotte place la terre et ceux qui la travaillent au centre de l'économie — pas le marché.</p>
-      </div>
-      <div class="theme-card">
-        <span class="card-icon">🤝</span>
-        <h3 class="card-title">Économie solidaire</h3>
-        <p class="card-text">Une caisse commune, des cotisations, redistribution selon les besoins. Modèle coopératif intégral comme alternative concrète au capitalisme.</p>
-      </div>
-      <div class="theme-card">
-        <span class="card-icon">🏘️</span>
-        <h3 class="card-title">Organisation collective</h3>
-        <p class="card-text">Autogestion, gouvernance partagée, décisions collectives. Le pouvoir est dans les mains de toutes et tous.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COOPÉRATIVE INTÉGRALE -->
-  <section id="cooperative">
-    <div class="coop-inner">
-      <p class="section-label">Concept clé</p>
-      <h2 class="section-title">Flux et fonctionnement de la CARotte</h2>
-      <p class="coop-intro"><strong>La CARotte</strong> n'est pas une entreprise : la production, la cotisation et la redistribution circulent selon les besoins, en gardant l'accès collectif comme priorité. Le flux se visualise ainsi :</p>
-      <div class="coop-diagram">
-        <div style="text-align:center; font-size:2.5rem; line-height:1.5;">
-          🥕<br><span style="font-size:1rem;">Production agricole</span><br>⬇️<br>
-          💰<br><span style="font-size:1rem;">Caisse commune</span><br>⬇️<br>
-          🏘️<br><span style="font-size:1rem;">Redistribution équitable</span><br>
-          ↗️ ↖️<br>🧑‍🌾 👩‍🌾<br>
-          <span style="font-size:0.85rem; opacity:0.7;">Participation active des membres</span>
+    <!-- Header / Accueil -->
+    <header>
+        <div class="logo">
+            <img src="logo-carotte.png" alt="Logo CARotte">
         </div>
-      </div>
-    </div>
-  </section>
+        <h1>CARotte : reprendre collectivement le pouvoir de la production alimentaire</h1>
+        <p class="accroche">Réinventer l’organisation du travail et préparer l’autonomie de la classe</p>
+    </header>
 
-  <!-- RESSOURCES -->
-  <section id="ressources">
-    <div class="ressources-inner">
-      <p class="section-label">Approfondir</p>
-      <h2 class="section-title">Ressources et références</h2>
-      <div class="ressources-list">
-        <div class="ressource-item">
-          <div class="ressource-icon">📚</div>
-          <div>
-            <div class="ressource-name">Guide de l’agriculture paysanne</div>
-            <div class="ressource-type">Livre / PDF</div>
-          </div>
+    <!-- Section 1 : Pourquoi CARotte ? -->
+    <section id="pourquoi">
+        <h2>Pourquoi CARotte ?</h2>
+        <div class="schéma">
+            <img src="schema-crises.png" alt="Schéma crises climatiques et politiques">
         </div>
-        <div class="ressource-item">
-          <div class="ressource-icon">🎥</div>
-          <div>
-            <div class="ressource-name">Podcast sur l’économie solidaire</div>
-            <div class="ressource-type">Audio / Vidéo</div>
-          </div>
+        <p>Face aux crises climatiques et à l’instabilité politique, l’autonomie de la classe est indispensable. Les structures isolées ne suffisent pas, CARotte vise une organisation massive et cohérente.</p>
+    </section>
+
+    <!-- Section 2 : La Coopérative Intégrale -->
+    <section id="ci">
+        <h2>La Coopérative Intégrale</h2>
+        <div class="schéma">
+            <img src="schema-ci.png" alt="Schéma organisation de la Coopérative Intégrale">
         </div>
-        <div class="ressource-item">
-          <div class="ressource-icon">📰</div>
-          <div>
-            <div class="ressource-name">Articles et études sur l’autogestion</div>
-            <div class="ressource-type">Texte / PDF</div>
-          </div>
+        <p>La CI organise production, échanges, finance, formation et coordination de manière démocratique et collective. Elle permet d'assurer l'autonomie et la résilience des structures affiliées.</p>
+    </section>
+
+    <!-- Section 3 : Le projet CARotte -->
+    <section id="carotte">
+        <h2>Le projet CARotte</h2>
+        <div class="schéma">
+            <img src="schema-flux.png" alt="Schéma flux de production et échanges">
         </div>
-        <div class="ressource-item">
-          <div class="ressource-icon">🧰</div>
-          <div>
-            <div class="ressource-name">Outils pour coopératives locales</div>
-            <div class="ressource-type">Site web / Tutoriels</div>
-          </div>
+        <p>CARotte met en place des structures concrètes : alimentation, logement rénové, santé et énergie. Chaque structure répond à un besoin essentiel et contribue à l’autonomie collective.</p>
+        <div class="secteurs">
+            <div class="secteur">Alimentation</div>
+            <div class="secteur">Logement</div>
+            <div class="secteur">Santé</div>
+            <div class="secteur">Énergie</div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- A PROPOS -->
-  <section id="apropos">
-    <div class="apropos-card-main">
-      CARotte est un projet collectif <br> qui remet la production, <br> la redistribution et la décision <br> entre les mains de toutes et tous.
-      <span>Notre mission : construire une alternative pratique au capitalisme et expérimenter l’autogestion.</span>
-      <div class="values-pills">
-        <span class="pill">Agriculture paysanne</span>
-        <span class="pill">Autogestion</span>
-        <span class="pill">Justice sociale</span>
-        <span class="pill">Anti-capitalisme</span>
-        <span class="pill">Communs</span>
-      </div>
-    </div>
-  </section>
+    <!-- Section 4 : Expansion et essaimage -->
+    <section id="expansion">
+        <h2>Expansion et essaimage</h2>
+        <div class="schéma">
+            <img src="schema-reseau.png" alt="Schéma réseau CI">
+        </div>
+        <p>Intégration de structures existantes et nouvelles, travail idéologique, expansion internationale. L’objectif : créer un réseau solide capable de résister aux pressions extérieures.</p>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-bg"></div>
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">Rejoindre la CARotte</h2>
-    <div class="contact-options">
-      <div class="contact-card">
-        <div>📧</div>
-        <p>Email</p>
-        <p>contact@carotte.org</p>
-      </div>
-      <div class="contact-card">
-        <div>🌐</div>
-        <p>Site web</p>
-        <p>www.carotte.org</p>
-      </div>
-      <div class="contact-card">
-        <div>📱</div>
-        <p>Réseaux</p>
-        <p>@projectcarotte</p>
-      </div>
-    </div>
-  </section>
+    <!-- Section 5 : Perspectives à long terme -->
+    <section id="long-terme">
+        <h2>Perspectives à long terme</h2>
+        <div class="schéma">
+            <img src="schema-mondial.png" alt="Carte mondiale de la CI">
+        </div>
+        <p>Du local à l’international, CARotte vise une société autonome et démocratique, capable d’essaimer sur plusieurs continents.</p>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">Project<span>.</span>CARotte</div>
-    <div>© 2026 Project CARotte. Tous droits réservés.</div>
-  </footer>
+    <!-- Section 6 : Dimension révolutionnaire -->
+    <section id="revolution">
+        <h2>Dimension révolutionnaire</h2>
+        <div class="schéma">
+            <img src="schema-chrono.png" alt="Schéma opportunités révolutionnaires">
+        </div>
+        <p>Le dérèglement climatique et les crises politiques créent des opportunités révolutionnaires. La CI prépare ses structures pour agir efficacement lorsque ces moments se produisent.</p>
+    </section>
 
+    <!-- Section 7 : Ressources -->
+    <section id="ressources">
+        <h2>Ressources</h2>
+        <ul>
+            <li><a href="#">Livres et articles sur les coopératives intégrales</a></li>
+            <li><a href="#">Guides pratiques de production alimentaire collective</a></li>
+            <li><a href="#">Vidéos et conférences sur l’organisation autonome</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CARotte - Tous droits réservés</p>
+    </footer>
 </body>
 </html>
