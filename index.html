@@ -1,93 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARotte - Coopérative Intégrale</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet CARotte — Ossature</title>
+  <meta name="description" content="Ossature HTML du site du projet CARotte." />
+
+  <!--
+    Ce fichier sert d'ossature HTML.
+    Il est pensé pour être rempli progressivement.
+    Les classes sont déjà organisées pour fonctionner avec un CSS séparé.
+  -->
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header / Accueil -->
-    <header>
-        <div class="logo">
-            <img src="logo-carotte.png" alt="Logo CARotte">
-        </div>
-        <h1>CARotte : reprendre collectivement le pouvoir de la production alimentaire</h1>
-        <p class="accroche">Réinventer l’organisation du travail et préparer l’autonomie de la classe</p>
-    </header>
+  <!-- ========================================================= -->
+  <!-- LIEN D'ÉVITEMENT                                           -->
+  <!-- ========================================================= -->
+  <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
 
-    <!-- Section 1 : Pourquoi CARotte ? -->
-    <section id="pourquoi">
-        <h2>Pourquoi CARotte ?</h2>
-        <div class="schéma">
-            <img src="schema-crises.png" alt="Schéma crises climatiques et politiques">
-        </div>
-        <p>Face aux crises climatiques et à l’instabilité politique, l’autonomie de la classe est indispensable. Les structures isolées ne suffisent pas, CARotte vise une organisation massive et cohérente.</p>
-    </section>
+  <!-- ========================================================= -->
+  <!-- EN-TÊTE DU SITE                                            -->
+  <!-- ========================================================= -->
+  <header class="site-header" id="top">
+    <div class="site-header__inner container">
+      <a href="#top" class="site-brand">
+        <span class="site-brand__mark">CARotte</span>
+        <span class="site-brand__text">Projet de coopérative intégrale</span>
+      </a>
 
-    <!-- Section 2 : La Coopérative Intégrale -->
-    <section id="ci">
-        <h2>La Coopérative Intégrale</h2>
-        <div class="schéma">
-            <img src="schema-ci.png" alt="Schéma organisation de la Coopérative Intégrale">
-        </div>
-        <p>La CI organise production, échanges, finance, formation et coordination de manière démocratique et collective. Elle permet d'assurer l'autonomie et la résilience des structures affiliées.</p>
-    </section>
-
-    <!-- Section 3 : Le projet CARotte -->
-    <section id="carotte">
-        <h2>Le projet CARotte</h2>
-        <div class="schéma">
-            <img src="schema-flux.png" alt="Schéma flux de production et échanges">
-        </div>
-        <p>CARotte met en place des structures concrètes : alimentation, logement rénové, santé et énergie. Chaque structure répond à un besoin essentiel et contribue à l’autonomie collective.</p>
-        <div class="secteurs">
-            <div class="secteur">Alimentation</div>
-            <div class="secteur">Logement</div>
-            <div class="secteur">Santé</div>
-            <div class="secteur">Énergie</div>
-        </div>
-    </section>
-
-    <!-- Section 4 : Expansion et essaimage -->
-    <section id="expansion">
-        <h2>Expansion et essaimage</h2>
-        <div class="schéma">
-            <img src="schema-reseau.png" alt="Schéma réseau CI">
-        </div>
-        <p>Intégration de structures existantes et nouvelles, travail idéologique, expansion internationale. L’objectif : créer un réseau solide capable de résister aux pressions extérieures.</p>
-    </section>
-
-    <!-- Section 5 : Perspectives à long terme -->
-    <section id="long-terme">
-        <h2>Perspectives à long terme</h2>
-        <div class="schéma">
-            <img src="schema-mondial.png" alt="Carte mondiale de la CI">
-        </div>
-        <p>Du local à l’international, CARotte vise une société autonome et démocratique, capable d’essaimer sur plusieurs continents.</p>
-    </section>
-
-    <!-- Section 6 : Dimension révolutionnaire -->
-    <section id="revolution">
-        <h2>Dimension révolutionnaire</h2>
-        <div class="schéma">
-            <img src="schema-chrono.png" alt="Schéma opportunités révolutionnaires">
-        </div>
-        <p>Le dérèglement climatique et les crises politiques créent des opportunités révolutionnaires. La CI prépare ses structures pour agir efficacement lorsque ces moments se produisent.</p>
-    </section>
-
-    <!-- Section 7 : Ressources -->
-    <section id="ressources">
-        <h2>Ressources</h2>
-        <ul>
-            <li><a href="#">Livres et articles sur les coopératives intégrales</a></li>
-            <li><a href="#">Guides pratiques de production alimentaire collective</a></li>
-            <li><a href="#">Vidéos et conférences sur l’organisation autonome</a></li>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul class="site-nav__list">
+          <li><a href="#accroche">Accueil</a></li>
+          <li><a href="#bloc-1">Pourquoi ce projet ?</a></li>
+          <li><a href="#bloc-2">Pourquoi une coopérative intégrale ?</a></li>
+          <li><a href="#bloc-3">Pourquoi commencer par l'agriculture ?</a></li>
+          <li><a href="#bloc-4">Durer, grandir, se lancer</a></li>
+          <li><a href="#annexes">Annexes</a></li>
         </ul>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 CARotte - Tous droits réservés</p>
-    </footer>
-</body>
-</html>
+  <!-- ========================================================= -->
+  <!-- HERO / ACCROCHE                                            -->
+  <!-- ========================================================= -->
+  <section class="hero" id="accroche">
+    <div class="hero__inner container">
+      <div class="hero__content">
+        <p class="eyebrow">Projet agricole, politique et révolutionnaire</p>
+        <h1 class="hero__title">Titre principal du site</h1>
+        <p class="hero__lead">
+          Bloc d'introduction court. Quelques lignes maximum.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href="#bloc-1">Lire le texte</a>
+          <a class="button button--ghost" href="#annexes">Voir les annexes</a>
+        </div>
+      </div>
+
+      <div class="hero__aside">
+        <div class="hero-card">
+          <p class="hero-card__label">Repère</p>
+          <p class="hero-card__text">Première base matérielle d'une stratégie plus large.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- MISE EN PAGE PRINCIPALE                                    -->
+  <!-- ========================================================= -->
+  <div class="page-layout container">
+    <!-- ======================================================= -->
+    <!-- SOMMAIRE LATÉRAL                                        -->
+    <!-- ======================================================= -->
+    <aside class="page-toc" aria-label="Sommaire de la page">
+      <div class="toc-card">
+        <p class="toc-card__title">Sommaire</p>
+
+        <nav class="toc-nav">
+          <ol class="toc-nav__list">
+            <li>
+              <a href="#bloc-1">I. Pourquoi ce projet ?</a>
+              <ol>
+                <li><a href="#section-2">2. Pourquoi construire dès maintenant ?</a></li>
+                <li><a href="#section-2-1">2.1 Construire avant les crises</a></li>
+                <li><a href="#section-2-2">2.2 Pourquoi une préparation matérielle est nécessaire</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="#bloc-2">II. Pourquoi une coopérative intégrale ?</a>
+              <ol>
+                <li><a href="#section-3">3. Pourquoi une coopérative intégrale ?</a></li>
+                <li><a href="#section-3-1">3.1 Une base matérielle...</a></li>
+                <li><a href="#section-3-2">3.2 Une économie orientée par les besoins...</a></li>
+                <li><a href="#section-3-3">3.3 Une solidarité organisée...</a></li>
+                <li><a href="#section-3-4">3.4 Implication, responsabilité, démocratie économique</a></li>
+                <li><a href="#section-3-5">3.5 Une ouverture maîtrisée</a></li>
+                <li><a href="#section-3-6">3.6 Une autonomie construite</a></li>
+                <li><a href="#section-3-7">3.7 Une forme appelée à se généraliser</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="#bloc-3">III. Pourquoi CARotte ?</a>
+              <ol>
+                <li><a href="#section-4">4. Pourquoi commencer par l'agriculture ?</a></li>
+                <li><a href="#section-4-1">4.1 L'alimentation co
