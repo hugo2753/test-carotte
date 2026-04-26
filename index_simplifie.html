@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARotte — Site de travail</title>
+  <link rel="stylesheet" href="style_simplifie.css">
+</head>
+<body>
+
+  <!-- Barre du haut -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="topbar-brand" href="index_simplifie.html">
+        <img src="logo-carotte.png" class="topbar-logo" alt="Logo CARotte">
+        <span>CARotte</span>
+      </a>
+
+      <nav class="topbar-nav">
+        <a class="active" href="index_simplifie.html">Accueil</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="deja-la.html">Le déjà-là</a>
+        <a href="#contact-footer">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sommaire latéral -->
+  <nav class="site-nav">
+    <div class="site-nav__handle"></div>
+
+    <div class="site-nav__panel">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#accroche">1. Accroche</a></li>
+
+        <li>
+          <a href="#bloc-1">I. Pourquoi ce projet ?</a>
+          <ul>
+            <li><a href="#section-2">2. Pourquoi construire dès maintenant ?</a></li>
+            <li><a href="#section-2-1">2.1 Construire avant les crises</a></li>
+            <li><a href="#section-2-2">2.2 Pourquoi une préparation matérielle est nécessaire</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#bloc-2">II. Pourquoi une coopérative intégrale ?</a>
+          <ul>
+            <li><a href="#section-3">3. Pourquoi une coopérative intégrale ?</a></li>
+            <li><a href="#section-3-1">3.1 Une base matérielle pour construire une autonomie collective réelle</a></li>
+            <li><a href="#section-3-2">3.2 Une économie orientée par les besoins, et non par la valorisation du capital</a></li>
+            <li><a href="#section-3-3">3.3 Une solidarité organisée, et non une simple compensation extérieure</a></li>
+            <li><a href="#section-3-4">3.4 Une organisation fondée sur l’implication, la responsabilité et la démocratie économique</a></li>
+            <li><a href="#section-3-5">3.5 Une ouverture maîtrisée : élargir sans se dissoudre</a></li>
+            <li><a href="#section-3-6">3.6 Une autonomie construite, non une illusion d’autarcie</a></li>
+            <li><a href="#section-3-7">3.7 Une forme appelée à se généraliser au-delà d’un seul secteur</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#bloc-3">III. Pourquoi CARotte ?</a>
+          <ul>
+            <li><a href="#section-4">4. Pourquoi commencer par l’agriculture ?</a></li>
+            <li><a href="#section-4-1">4.1 L’alimentation comme besoin vital et terrain stratégique</a></li>
+            <li><a href="#section-4-2">4.2 Un point d’entrée matériel relativement accessible</a></li>
+            <li><a href="#section-4-3">4.3 Un secteur propice à l’ancrage social, à la politisation et à l’essaimage</a></li>
+            <li><a href="#section-4-4">4.4 Pourquoi CARotte est une première base cohérente</a></li>
+            <li><a href="#section-5">5. Comment fonctionnerait CARotte ?</a></li>
+            <li><a href="#section-5-1">5.1 Travail, pouvoir et organisation anti-autoritaire</a></li>
+            <li><a href="#section-5-2">5.2 Cotisation, accès et logique de redistribution</a></li>
+            <li><a href="#section-5-3">5.3 Proposition d’organisation économique et politique : A, B, C et D</a></li>
+            <li><a href="#section-5-4">5.4 Ce que ce modèle peut apporter à terme</a></li>
+            <li><a href="#section-5-5">5.5 Ce que les débuts exigeront probablement</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#bloc-4">IV. Comment le projet peut durer, grandir et se lancer ?</a>
+          <ul>
+            <li><a href="#section-6">6. Comment le projet peut durer et grandir ?</a></li>
+            <li><a href="#section-6-1">6.1 Consolider une première base</a></li>
+            <li><a href="#section-6-2">6.2 Pourquoi un commun théorique et stratégique est nécessaire</a></li>
+            <li><a href="#section-6-3">6.3 Étendre par création et par intégration de structures existantes</a></li>
+            <li><a href="#section-6-4">6.4 Généraliser le modèle à d’autres secteurs</a></li>
+            <li><a href="#section-6-5">6.5 Penser l’internationalisation à long terme</a></li>
+            <li><a href="#section-7">7. Conditions de lancement et faisabilité</a></li>
+            <li><a href="#section-7-1">7.1 De quoi faut-il disposer pour commencer ?</a></li>
+            <li><a href="#section-7-2">7.2 Hypothèses de départ : reprise, transformation, installation nouvelle</a></li>
+            <li><a href="#section-7-3">7.3 Pistes de financement</a></li>
+            <li><a href="#section-7-4">7.4 Ce qui devra être étudié collectivement</a></li>
+            <li><a href="#section-8">8. Ressources</a></li>
+            <li><a href="#section-9">9. Rejoindre le projet</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="site-main">
+
+    <!-- Accroche -->
+    <header class="site-hero" id="accroche">
+      <div class="hero-logo-wrap">
+        <img src="logo-carotte.png" class="hero-logo" alt="Logo CARotte">
+      </div>
+      <h1>CARotte</h1>
+      <p class="site-subtitle">Projet de coopérative agricole et première base matérielle d’une stratégie révolutionnaire.</p>
+    </header>
+
+    <!-- Bloc I -->
+    <section class="section-block major" id="bloc-1">
+      <span class="section-label">Bloc I</span>
+      <h2>Pourquoi ce projet ?</h2>
+
+      <p>CARotte est une coopérative agricole pensée comme une première base matérielle d’un projet plus large de transformation économique et politique révolutionnaire. Son objectif n’est pas seulement de produire et de distribuer une alimentation de qualité, locale et écologique, mais de reprendre collectivement du pouvoir sur la production d’un besoin vital, sur l’organisation du travail, et sur les conditions matérielles de l’autonomie politique.</p>
+      <p>Là où le capitalisme organise la production pour la valorisation du capital, à travers l’exploitation, la propriété privée et la mise en marché croissante de la vie ordinaire, CARotte cherche à construire une autre logique. Il s’agit de produire selon des besoins définis politiquement, de faire de l’activité économique un support de solidarité organisée, et de donner à celles et ceux qui font vivre la structure un pouvoir réel sur son fonctionnement. Le projet est donc explicitement anti-capitaliste et anti-autoritaire.</p>
+      <p>CARotte ne se réduit pas non plus à une initiative locale sympathique, à une meilleure expérience de consommation, ni à une structure de charité. L’enjeu est plus profond : construire une organisation économique qui tende à supprimer les rapports de domination dans la production et dans l’accès aux ressources, tout en renforçant l’autonomie collective de celles et ceux qui y participent.</p>
+      <p>Le projet repose sur une idée simple : aucune tentative révolutionnaire sérieuse ne peut durer sans bases matérielles propres. Construire des institutions matérielles autonomes n’est donc pas une question secondaire. C’est une condition de solidité politique.</p>
+      <p>CARotte doit être compris dans cette perspective. Il ne constitue pas encore à lui seul une coopérative intégrale, mais une première base cohérente de celle-ci. En ce sens, CARotte n’est pas la totalité du projet, mais son premier ancrage matériel.</p>
+      <p>CARotte est donc à la fois un projet agricole concret, une proposition d’organisation anti-capitaliste et anti-autoritaire, et une première étape dans une stratégie révolutionnaire de long terme. Son but n’est pas seulement de mieux produire. Son but est de commencer à reconstruire, à partir d’un besoin vital, des formes de pouvoir collectif capables de durer, de s’élargir, et de se préparer aux opportunités révolutionnaires.</p>
+
+      <div class="subsection" id="section-2">
+        <h3>2. Pourquoi construire dès maintenant ?</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-2-1">
+        <h3>2.1 Construire avant les crises</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+            <li>Point 5</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+        <p>Paragraphe</p>
+        <div class="schema-box">
+          <p class="schema-title">Schéma du bloc I</p>
+          <p>Espace réservé au schéma</p>
+        </div>
+      </div>
+
+      <div class="subsection" id="section-2-2">
+        <h3>2.2 Pourquoi une préparation matérielle est nécessaire</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+        <p>Paragraphe</p>
+      </div>
+    </section>
+
+    <!-- Bloc II -->
+    <section class="section-block major" id="bloc-2">
+      <span class="section-label">Bloc II</span>
+      <h2>Pourquoi une coopérative intégrale ?</h2>
+      <p class="section-intro">Paragraphe</p>
+
+      <div class="subsection" id="section-3">
+        <h3>3. Pourquoi une coopérative intégrale ?</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-3-1">
+        <h3>3.1 Une base matérielle pour construire une autonomie collective réelle</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-3-2">
+        <h3>3.2 Une économie orientée par les besoins, et non par la valorisation du capital</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+            <li>Point 5</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-3-3">
+        <h3>3.3 Une solidarité organisée, et non une simple compensation extérieure</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-3-4">
+        <h3>3.4 Une organisation fondée sur l’implication, la responsabilité et la démocratie économique</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-3-5">
+        <h3>3.5 Une ouverture maîtrisée : élargir sans se dissoudre</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-3-6">
+        <h3>3.6 Une autonomie construite, non une illusion d’autarcie</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-3-7">
+        <h3>3.7 Une forme appelée à se généraliser au-delà d’un seul secteur</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+        <div class="schema-box">
+          <p class="schema-title">Schéma du bloc II</p>
+          <p>Espace réservé au schéma</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloc III -->
+    <section class="section-block major" id="bloc-3">
+      <span class="section-label">Bloc III</span>
+      <h2>Pourquoi CARotte ?</h2>
+      <p class="section-intro">Paragraphe</p>
+
+      <div class="subsection" id="section-4">
+        <h3>4. Pourquoi commencer par l’agriculture ?</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-4-1">
+        <h3>4.1 L’alimentation comme besoin vital et terrain stratégique</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-4-2">
+        <h3>4.2 Un point d’entrée matériel relativement accessible</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-4-3">
+        <h3>4.3 Un secteur propice à l’ancrage social, à la politisation et à l’essaimage</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-4-4">
+        <h3>4.4 Pourquoi CARotte est une première base cohérente</h3>
+        <p>Paragraphe</p>
+        <div class="schema-box">
+          <p class="schema-title">Schéma du bloc III — partie 4</p>
+          <p>Espace réservé au schéma</p>
+        </div>
+      </div>
+
+      <div class="subsection" id="section-5">
+        <h3>5. Comment fonctionnerait CARotte ?</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+            <li>Point 5</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-5-1">
+        <h3>5.1 Travail, pouvoir et organisation anti-autoritaire</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-5-2">
+        <h3>5.2 Cotisation, accès et logique de redistribution</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-5-3">
+        <h3>5.3 Proposition d’organisation économique et politique : A, B, C et D</h3>
+        <p>Paragraphe</p>
+        <div class="schema-box">
+          <p class="schema-title">Schéma central du site</p>
+          <p>Espace réservé au schéma A / B / C / D</p>
+        </div>
+      </div>
+
+      <div class="subsection" id="section-5-4">
+        <h3>5.4 Ce que ce modèle peut apporter à terme</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-5-5">
+        <h3>5.5 Ce que les débuts exigeront probablement</h3>
+        <p>Paragraphe</p>
+      </div>
+    </section>
+
+    <!-- Bloc IV -->
+    <section class="section-block accent" id="bloc-4">
+      <span class="section-label">Bloc IV</span>
+      <h2>Comment le projet peut durer, grandir et se lancer ?</h2>
+      <p class="section-intro">Paragraphe</p>
+
+      <div class="subsection" id="section-6">
+        <h3>6. Comment le projet peut durer et grandir ?</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+            <li>Point 5</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-6-1">
+        <h3>6.1 Consolider une première base</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-6-2">
+        <h3>6.2 Pourquoi un commun théorique et stratégique est nécessaire</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-6-3">
+        <h3>6.3 Étendre par création et par intégration de structures existantes</h3>
+        <p>Paragraphe</p>
+        <div class="schema-box">
+          <p class="schema-title">Schéma du bloc IV</p>
+          <p>Espace réservé au schéma d’expansion</p>
+        </div>
+      </div>
+
+      <div class="subsection" id="section-6-4">
+        <h3>6.4 Généraliser le modèle à d’autres secteurs</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-6-5">
+        <h3>6.5 Penser l’internationalisation à long terme</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-7">
+        <h3>7. Conditions de lancement et faisabilité</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-7-1">
+        <h3>7.1 De quoi faut-il disposer pour commencer ?</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-7-2">
+        <h3>7.2 Hypothèses de départ : reprise, transformation, installation nouvelle</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-7-3">
+        <h3>7.3 Pistes de financement</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-7-4">
+        <h3>7.4 Ce qui devra être étudié collectivement</h3>
+        <p>Paragraphe</p>
+      </div>
+
+      <div class="subsection" id="section-8">
+        <h3>8. Ressources</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Présentation rapide des pages annexes</li>
+            <li>Le déjà-là</li>
+            <li>Ressources</li>
+          </ul>
+        </div>
+
+        <p>Paragraphe</p>
+
+        <div class="annex-grid">
+          <article class="annex-card">
+            <h4>Le déjà-là</h4>
+            <p>Paragraphe</p>
+          </article>
+
+          <article class="annex-card">
+            <h4>Ressources</h4>
+            <p>Paragraphe</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="subsection" id="section-9">
+        <h3>9. Rejoindre le projet</h3>
+        <div class="mini-summary">
+          <!-- mini sommaire -->
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+        </div>
+        <p>Paragraphe</p>
+
+        <div class="cta-box">
+          <h4>Bloc d’appel à implication</h4>
+          <p>Paragraphe</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact-footer">
+      <p>Contact : contact@ton-site.fr</p>
+      <p>Site de travail — version simplifiée</p>
+    </footer>
+  </main>
+</body>
+</html>
