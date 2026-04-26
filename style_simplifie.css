@@ -1,0 +1,780 @@
+/* =========================================================
+   CARotte — feuille de style partagée
+   ---------------------------------------------------------
+   Cette feuille est organisée en 5 blocs :
+   1. Variables globales
+   2. Base commune du site
+   3. Composants partagés (topbar, footer, cartes, etc.)
+   4. Page principale
+   5. Pages annexes : Ressources + Le déjà-là
+
+   Objectif : garder un seul CSS pour toutes les pages,
+   tout en séparant clairement ce qui est commun de ce qui
+   appartient à une page précise.
+   ========================================================= */
+
+/* =========================================================
+   1. VARIABLES GLOBALES
+   ---------------------------------------------------------
+   Toutes les couleurs, largeurs et espacements importants
+   sont définis ici pour être faciles à modifier.
+   ========================================================= */
+:root {
+  --bg: #f7f4ea;
+  --surface: #fffdf8;
+  --surface-soft: #fcfaf4;
+
+  --text: #1f2a1f;
+  --text-soft: #4a5a4c;
+
+  --green: #2f6b3b;
+  --green-dark: #1f4e2a;
+  --green-light: #e3eee1;
+
+  --orange: #d66a1f;
+  --orange-dark: #a75418;
+  --orange-light: #fff0e2;
+
+  --border: #d6ddcf;
+  --shadow: rgba(31, 42, 31, 0.08);
+
+  --content-width: 1100px;
+  --nav-width: 300px;
+  --nav-handle: 30px;
+
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 12px;
+}
+
+/* =========================================================
+   2. BASE COMMUNE DU SITE
+   ---------------------------------------------------------
+   Reset léger + styles généraux pour les textes, liens,
+   images et blocs de base.
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  color: var(--green-dark);
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: 78ch;
+}
+
+/* =========================================================
+   3. COMPOSANTS PARTAGÉS
+   ---------------------------------------------------------
+   Ces styles servent à plusieurs pages du site.
+   ========================================================= */
+
+/* -------------------------
+   Barre du haut
+   ------------------------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 253, 248, 0.96);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.topbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--green);
+  font-weight: bold;
+}
+
+.topbar-brand:hover {
+  text-decoration: none;
+}
+
+.topbar-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.topbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.topbar-nav a {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.topbar-nav a:hover {
+  background: var(--green-light);
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+.topbar-nav a.active {
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+/* -------------------------
+   Footer simple
+   ------------------------- */
+.site-footer,
+.resources-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(47, 107, 59, 0.14);
+  color: var(--text-soft);
+}
+
+.resources-footer {
+  padding: 1.3rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.resources-footer p {
+  max-width: none;
+}
+
+/* -------------------------
+   Étiquettes / badges
+   ------------------------- */
+.section-label,
+.resources-kicker,
+.deja-kicker {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.section-label {
+  margin-bottom: 0.8rem;
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+.resources-kicker {
+  margin-bottom: 0.9rem;
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+
+.deja-kicker {
+  margin-bottom: 0.8rem;
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+/* -------------------------
+   Boîtes génériques utilisées
+   dans plusieurs pages
+   ------------------------- */
+.schema-box,
+.cta-box,
+.annex-card,
+.resources-box,
+.resources-section,
+.explore-section,
+.deja-note,
+.deja-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.schema-box,
+.cta-box,
+.annex-card {
+  margin-top: 1.3rem;
+  padding: 1rem 1.1rem;
+}
+
+.schema-title {
+  color: var(--green-dark);
+  font-weight: bold;
+}
+
+/* =========================================================
+   4. PAGE PRINCIPALE
+   ---------------------------------------------------------
+   index_simplifie.html
+   ========================================================= */
+
+/* -------------------------
+   Sommaire latéral repliable
+   ------------------------- */
+.site-nav {
+  position: fixed;
+  top: 88px;
+  right: 0;
+  z-index: 90;
+  width: var(--nav-width);
+  max-height: calc(100vh - 100px);
+  transform: translateX(calc(var(--nav-width) - var(--nav-handle)));
+  transition: transform 0.25s ease;
+}
+
+.site-nav:hover {
+  transform: translateX(0);
+}
+
+.site-nav__handle {
+  position: absolute;
+  top: 18px;
+  left: calc(-1 * var(--nav-handle));
+  width: var(--nav-handle);
+  height: 72px;
+  background: var(--green);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  box-shadow: 0 8px 20px rgba(20, 30, 20, 0.12);
+}
+
+.site-nav__handle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: translate(-35%, -50%) rotate(-45deg);
+}
+
+.site-nav__panel {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding: 1rem;
+  background: rgba(255, 253, 248, 0.98);
+  border: 1px solid rgba(47, 107, 59, 0.15);
+  border-right: none;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  box-shadow: 0 18px 38px rgba(31, 42, 31, 0.16);
+}
+
+.site-nav__panel h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.site-nav__panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__panel > ul > li {
+  margin-bottom: 0.4rem;
+}
+
+.site-nav__panel ul ul {
+  margin-top: 0.35rem;
+  margin-left: 0.7rem;
+  padding-left: 0.7rem;
+  border-left: 2px solid rgba(214, 106, 31, 0.2);
+}
+
+.site-nav__panel a {
+  display: block;
+  padding: 0.3rem 0.4rem;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.site-nav__panel a:hover {
+  background: rgba(47, 107, 59, 0.08);
+  text-decoration: none;
+}
+
+/* -------------------------
+   Colonne centrale
+   ------------------------- */
+.site-main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2rem 3rem 6rem;
+}
+
+/* -------------------------
+   Hero principal
+   ------------------------- */
+.site-hero {
+  margin-bottom: 3rem;
+  padding: 2.2rem;
+  background: linear-gradient(
+      135deg,
+      rgba(47, 107, 59, 0.08),
+      rgba(214, 106, 31, 0.08)
+    ),
+    var(--surface);
+  border: 1px solid rgba(47, 107, 59, 0.15);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.hero-logo-wrap {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-logo {
+  display: inline-block;
+  width: min(220px, 34vw);
+}
+
+.site-hero h1,
+.site-hero .site-subtitle {
+  text-align: center;
+}
+
+.site-subtitle {
+  max-width: none;
+  color: var(--text-soft);
+}
+
+/* -------------------------
+   Blocs et sous-sections
+   ------------------------- */
+.section-block {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.section-block.major {
+  border-left: 8px solid var(--green);
+}
+
+.section-block.accent {
+  border-left: 8px solid var(--orange);
+}
+
+.section-intro {
+  color: var(--text-soft);
+}
+
+.subsection {
+  margin-top: 1.8rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid rgba(47, 107, 59, 0.12);
+}
+
+/* -------------------------
+   Mini sommaires
+   ------------------------- */
+.mini-summary {
+  margin: 1rem 0 1.4rem;
+  padding: 1rem 1.1rem;
+  background: #fff8f1;
+  border: 1px solid rgba(214, 106, 31, 0.18);
+  border-radius: var(--radius-sm);
+}
+
+.mini-summary ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+/* -------------------------
+   Renvois vers annexes
+   ------------------------- */
+.annex-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* =========================================================
+   5. PAGE RESSOURCES
+   ---------------------------------------------------------
+   ressources.html
+   ========================================================= */
+.resources-page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2rem 3rem 6rem;
+}
+
+.resources-hero {
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  background: linear-gradient(
+      135deg,
+      rgba(47, 107, 59, 0.08),
+      rgba(214, 106, 31, 0.08)
+    ),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.resources-hero p {
+  max-width: 74ch;
+}
+
+.resources-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.resources-box,
+.resources-section,
+.explore-section,
+.resources-footer {
+  margin-bottom: 1.5rem;
+  padding: 1.3rem;
+}
+
+.resources-tools {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.resources-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.resources-tag {
+  padding: 0.45rem 0.8rem;
+  background: #fff;
+  color: var(--green-dark);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: bold;
+  border: 1px solid rgba(47, 107, 59, 0.15);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.resources-tag:hover,
+.resources-tag.is-active {
+  background: var(--green-light);
+}
+
+.resources-grid,
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: var(--surface-soft);
+  border: 1px solid rgba(47, 107, 59, 0.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.resource-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--green-light), var(--orange-light));
+  color: var(--green-dark);
+  font-weight: bold;
+  text-align: center;
+}
+
+.resource-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+.resource-meta,
+.resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.resource-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.55rem;
+  font-size: 0.82rem;
+  font-weight: bold;
+  border-radius: 999px;
+}
+
+.resource-pill.type {
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+
+.resource-pill.time {
+  background: var(--orange-light);
+  color: var(--orange-dark);
+}
+
+.resource-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.resource-source {
+  margin: -0.25rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  font-weight: bold;
+}
+
+.resource-text {
+  flex: 1;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.resource-tag {
+  display: inline-block;
+  padding: 0.28rem 0.55rem;
+  background: #f7f9f4;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: bold;
+  border: 1px solid rgba(47, 107, 59, 0.12);
+  border-radius: 999px;
+}
+
+.resource-link,
+.deja-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 0.65rem 0.95rem;
+  background: var(--green);
+  color: white;
+  font-weight: bold;
+  border-radius: 999px;
+}
+
+.resource-link:hover,
+.deja-link:hover {
+  background: var(--green-dark);
+  text-decoration: none;
+}
+
+.explore-card {
+  padding: 1rem;
+  background: #fcfbf6;
+  border: 1px dashed rgba(47, 107, 59, 0.22);
+  border-radius: var(--radius-md);
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* =========================================================
+   6. PAGE LE DÉJÀ-LÀ
+   ---------------------------------------------------------
+   deja-la.html
+   ========================================================= */
+.deja-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 3rem 5rem;
+}
+
+.deja-hero {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(
+      135deg,
+      rgba(47, 107, 59, 0.08),
+      rgba(214, 106, 31, 0.08)
+    ),
+    var(--surface);
+  border: 1px solid rgba(47, 107, 59, 0.15);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.deja-hero p:last-child,
+.deja-card p:last-child,
+.deja-note p:last-child {
+  margin-bottom: 0;
+}
+
+.deja-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.deja-note {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(47, 107, 59, 0.14);
+  border-radius: var(--radius-md);
+}
+
+.deja-section {
+  margin-bottom: 2.5rem;
+  padding: 1.8rem;
+}
+
+.deja-section--major {
+  border-left: 8px solid var(--green);
+}
+
+.deja-section--soft {
+  border-left: 8px solid var(--orange);
+}
+
+.deja-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.deja-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.2rem;
+  background: #fffefb;
+  border: 1px solid rgba(47, 107, 59, 0.14);
+  border-radius: 16px;
+}
+
+.deja-card--model {
+  background: #fff9f2;
+  border-style: dashed;
+  border-color: rgba(214, 106, 31, 0.32);
+}
+
+.deja-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.deja-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.65rem;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+.deja-pill--orange {
+  background: var(--orange-light);
+  color: var(--orange-dark);
+}
+
+.deja-card h3 {
+  margin-bottom: 0.1rem;
+}
+
+.deja-small {
+  font-size: 0.94rem;
+  color: var(--text-soft);
+}
+
+.deja-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.deja-list li {
+  margin-bottom: 0.35rem;
+}
+
+.deja-placeholder {
+  color: var(--text-soft);
+  font-style: italic;
+}
