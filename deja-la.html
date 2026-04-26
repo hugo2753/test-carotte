@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARotte — Le déjà-là</title>
+  <link rel="stylesheet" href="style_simplifie.css">
+  <style>
+    /* ==============================
+       PAGE LE DÉJÀ-LÀ
+       Version branchée sur deja-la.csv
+       ============================== */
+
+    .deja-page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 3rem 5rem;
+    }
+
+    .deja-hero {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      border: 1px solid rgba(47, 107, 59, 0.15);
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(47, 107, 59, 0.08), rgba(214, 106, 31, 0.08)), var(--surface);
+      box-shadow: 0 10px 28px var(--shadow);
+    }
+
+    .deja-kicker {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      background: var(--orange-light);
+      color: var(--orange);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .deja-hero p:last-child,
+    .deja-card p:last-child,
+    .deja-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .deja-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .deja-note {
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(47, 107, 59, 0.14);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: 0 10px 24px var(--shadow);
+    }
+
+    .deja-tools {
+      margin-bottom: 2rem;
+    }
+
+    .deja-tools .resources-box h2 {
+      margin-bottom: 0.85rem;
+    }
+
+    .deja-section {
+      margin-bottom: 2.5rem;
+      padding: 1.8rem;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: 0 10px 28px var(--shadow);
+    }
+
+    .deja-section--major {
+      border-left: 8px solid var(--green);
+    }
+
+    .deja-section--soft {
+      border-left: 8px solid var(--orange);
+    }
+
+    .deja-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .deja-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      padding: 1.2rem;
+      border: 1px solid rgba(47, 107, 59, 0.14);
+      border-radius: 16px;
+      background: #fffefb;
+      scroll-margin-top: 6rem;
+    }
+
+    .deja-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .deja-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: var(--green-light);
+      color: var(--green-dark);
+    }
+
+    .deja-pill--orange {
+      background: var(--orange-light);
+      color: var(--orange-dark);
+    }
+
+    .deja-card h3 {
+      margin-bottom: 0.1rem;
+    }
+
+    .deja-small {
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .deja-list {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .deja-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .deja-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      font-weight: 700;
+    }
+
+    .deja-link:hover {
+      background: var(--green-dark);
+      text-decoration: none;
+    }
+
+    .deja-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.15rem;
+    }
+
+    .deja-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(47, 107, 59, 0.12);
+      background: rgba(47, 107, 59, 0.05);
+      color: var(--text-soft);
+      font-size: 0.78rem;
+      line-height: 1;
+    }
+
+    .deja-tag a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .deja-related {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+    }
+
+    .deja-related a {
+      font-weight: 700;
+    }
+
+    .deja-empty {
+      padding: 1rem 1.1rem;
+      border: 1px dashed rgba(47, 107, 59, 0.2);
+      border-radius: 12px;
+      color: var(--text-soft);
+      font-style: italic;
+      background: #fffefb;
+    }
+
+    .is-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="topbar-brand" href="index_simplifie.html">
+        <img src="logo-carotte.png" class="topbar-logo" alt="Logo CARotte">
+        <span>CARotte</span>
+      </a>
+
+      <nav class="topbar-nav">
+        <a href="index_simplifie.html">Accueil</a>
+        <a href="ressources.html">Ressources</a>
+        <a class="active" href="deja-la.html">Le déjà-là</a>
+        <a href="#contact-footer">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="deja-page">
+
+    <section class="deja-hero">
+      <span class="deja-kicker">Annexe</span>
+      <h1>Le déjà-là</h1>
+      <p>Cette page ne recense pas des modèles à copier tels quels, mais des structures, expériences et outils qui mettent déjà en œuvre certaines dimensions proches de ce que le projet cherche à construire. Son rôle n’est pas de tout confondre, mais de repérer des fragments, des points d’appui, des limites et des pistes de réflexion.</p>
+      <p>Elle doit aider à voir qu’on ne part pas de rien : il existe déjà des réseaux de ravitaillement, des outils fonciers, des tentatives de propriété commune, des structures d’accès à la terre et d’autres expériences qui peuvent éclairer certaines dimensions de la coopérative intégrale, sans s’y réduire entièrement.</p>
+    </section>
+
+    <section class="deja-row">
+      <article class="deja-note">
+        <h2>Comment lire cette page</h2>
+        <p>Chaque carte répond à la même logique : ce que la structure met en œuvre, en quoi elle est proche de la CI, ce qui la distingue, et ce qu’elle permet de penser stratégiquement. Le but n’est pas de produire une galerie militante, mais une cartographie raisonnée.</p>
+      </article>
+
+      <article class="deja-note">
+        <h2>Fonction de l’annexe</h2>
+        <p>La page principale expose une logique générale. <em>Le déjà-là</em> sert à montrer des réalités existantes : outils, réseaux, lieux, montages fonciers, expériences partielles. Elle complète le site sans remplacer son argumentation centrale.</p>
+      </article>
+    </section>
+
+    <section class="resources-tools deja-tools">
+      <article class="resources-box">
+        <h2>Recherche rapide</h2>
+        <input class="search-input" type="search" id="dejaSearchInput" placeholder="Chercher un nom, un lieu, une période, un type, un thème...">
+      </article>
+
+      <article class="resources-box">
+        <h2>Tags</h2>
+        <div class="resources-tags" id="dejaTags"></div>
+      </article>
+    </section>
+
+    <section class="deja-section deja-section--major" id="france-aujourdhui">
+      <h2>France aujourd’hui</h2>
+      <p class="deja-small">Premiers repères dans le contexte le plus proche : ravitaillement, accès à la terre, propriété commune de lieux.</p>
+      <div class="deja-grid" id="dejaFranceGrid"></div>
+    </section>
+
+    <section class="deja-section deja-section--soft" id="international">
+      <h2>International</h2>
+      <p class="deja-small">Quelques repères internationaux utiles pour penser l’autonomie, la mise en réseau intégrale, le contre-pouvoir et la durée d’expériences politiques non capitalistes, sans les transformer en modèles à copier tels quels.</p>
+      <div class="deja-grid" id="dejaInternationalGrid"></div>
+    </section>
+
+    <section class="deja-section deja-section--soft" id="reperes-historiques">
+      <h2>Repères historiques</h2>
+      <p class="deja-small">Quelques précédents utiles pour penser la socialisation, les caisses, la mutualisation et la mise à distance partielle du marché, sans confondre ces expériences avec le projet présenté sur le site.</p>
+      <div class="deja-grid" id="dejaHistoriqueGrid"></div>
+    </section>
+
+    <footer class="site-footer" id="contact-footer">
+      <h2>Contact</h2>
+      <p>Pour proposer une structure, signaler un lien cassé ou suggérer une correction :</p>
+      <p><a href="mailto:contact@ton-site.fr">contact@ton-site.fr</a></p>
+    </footer>
+  </main>
+
+  <script src="deja-la.js"></script>
+</body>
+</html>
