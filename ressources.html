@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARotte — Ressources</title>
+  <link rel="stylesheet" href="style_simplifie.css">
+</head>
+<body>
+
+  <!-- Barre du haut : même structure que la page principale -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="topbar-brand" href="index_simplifie.html">
+        <img src="logo-carotte.png" class="topbar-logo" alt="Logo CARotte">
+        <span>CARotte</span>
+      </a>
+
+      <nav class="topbar-nav">
+        <a href="index_simplifie.html">Accueil</a>
+        <a class="active" href="ressources.html">Ressources</a>
+        <a href="deja-la.html">Le déjà-là</a>
+        <a href="#contact-footer">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="resources-page">
+
+    <!-- Introduction de la page -->
+    <section class="resources-hero">
+      <span class="resources-kicker">Annexe</span>
+      <h1>Ressources</h1>
+      <p>Cette page rassemble des ressources pour approfondir certains thèmes du site. Le but n’est pas de tout épuiser, mais de proposer des points d’entrée clairs, classés et faciles à retrouver.</p>
+      <p>Les cartes ci-dessous sont maintenant générées automatiquement à partir d’un fichier CSV. L’ajout de nouvelles ressources ne demande donc plus de recopier une carte complète dans le HTML.</p>
+    </section>
+
+    <!-- Deux petits blocs d'explication -->
+    <section class="resources-row">
+      <article class="resources-box">
+        <h2>Comment chercher</h2>
+        <p>Tu peux utiliser la recherche rapide ci-dessous, cliquer sur les tags, ou simplement faire <strong>Ctrl + F</strong> si tu connais déjà un mot-clé précis.</p>
+      </article>
+
+      <article class="resources-box">
+        <h2>Contribuer</h2>
+        <p>Le site est pensé pour pouvoir être enrichi à partir d’un tableau partagé, puis d’un export CSV validé avant publication.</p>
+      </article>
+    </section>
+
+    <!-- Barre de recherche et tags -->
+    <section class="resources-tools">
+      <article class="resources-box">
+        <h2>Recherche rapide</h2>
+        <input class="search-input" type="search" id="searchInput" placeholder="Chercher un titre, un thème, une source, un tag...">
+      </article>
+
+      <article class="resources-box">
+        <h2>Tags</h2>
+        <!-- Les boutons de tags seront générés automatiquement par ressources.js -->
+        <div class="resources-tags" id="resourcesTags"></div>
+      </article>
+    </section>
+
+    <!-- Grille principale des ressources -->
+    <section class="resources-section">
+      <h2>Ressources disponibles</h2>
+      <p>Les cartes sont générées automatiquement depuis <code>ressources.csv</code>. Il suffit donc d’ajouter une ligne validée dans le fichier de données pour faire apparaître une nouvelle ressource.</p>
+
+      <!-- La grille est remplie par ressources.js -->
+      <div class="resources-grid" id="resourcesGrid"></div>
+    </section>
+
+    <!-- Bloc de renvois entre ressources -->
+    <section class="explore-section">
+      <h2>À explorer aussi</h2>
+      <p>Ce bloc peut servir à proposer des ressources liées, même si elles ne sont pas rangées au même endroit ou ne relèvent pas exactement du même thème.</p>
+
+      <div class="explore-grid">
+        <article class="explore-card">
+          <h3>Salaire à vie et Sécurité sociale</h3>
+          <p>Exemple de lien futur : une ressource sur le salaire à vie, puis une autre sur l’histoire des premières caisses socialisées.</p>
+        </article>
+
+        <article class="explore-card">
+          <h3>Coopératives et stratégie</h3>
+          <p>Exemple de lien futur : une vidéo sur les coopératives, puis une autre ressource sur leurs limites et leurs usages stratégiques.</p>
+        </article>
+
+        <article class="explore-card">
+          <h3>Autonomie et déjà-là</h3>
+          <p>Tu pourras plus tard relier certains tags à la page <em>Le déjà-là</em>, par exemple pour les zapatistes, la Sécurité sociale ou Terre de Liens.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact simple en bas de page -->
+    <footer class="resources-footer" id="contact-footer">
+      <h2>Contact</h2>
+      <p>Pour proposer une ressource, signaler un lien cassé ou suggérer une correction :</p>
+      <p><a href="mailto:contact@ton-site.fr">contact@ton-site.fr</a></p>
+    </footer>
+
+  </main>
+
+  <!-- Le comportement de la page est déplacé dans un fichier séparé -->
+  <script src="ressources.js"></script>
+</body>
+</html>
